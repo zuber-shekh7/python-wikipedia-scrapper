@@ -25,5 +25,7 @@ def scrapper(url):
 
 
 if __name__ == '__main__':
-    URL = f'{BASE_URL}/wiki/Web_scraping'
+    topic = input('Enter the topic: ')
+    topic = topic.replace(' ', '_').capitalize()
+    URL = f'{BASE_URL}/wiki/{topic}'
     scrapper(URL)
